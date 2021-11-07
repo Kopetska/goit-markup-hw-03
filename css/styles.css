@@ -47,14 +47,18 @@ img {
 .section {
   background-color: var(--main-background-color);
 }
-.section,
 .team,
-.list {
+.list,
+.sections {
   padding-top: 94px;
+  padding-bottom: 94px;
+}
+.section {
   padding-bottom: 94px;
 }
 .page-header {
   background-color: var(--main-background-color);
+  border: 1px solid #ececec;
 }
 .logo,
 .logo-footer {
@@ -116,6 +120,8 @@ img {
 .hero {
   background-color: var(--color-hero-footer);
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .hero-title {
   margin-top: 0;
@@ -142,7 +148,7 @@ img {
   border-radius: 4px;
   padding: 10px 32px;
   min-width: 136px;
-  margin-bottom: 200px;
+  margin-bottom: 0;
 }
 .button:hover,
 .button:focus {
@@ -152,7 +158,11 @@ img {
 .features {
   display: flex;
 }
-.features .main {
+.features .benefit:not(:last-child) {
+  margin-right: 30px;
+}
+.features,
+.main {
   background-color: var(--main-background-color);
 }
 .feature-item,
@@ -189,6 +199,12 @@ img {
 .action {
   display: flex;
 }
+.action .photo:not(:last-child) {
+  margin-right: 30px;
+}
+.team-prof .person:not(:last-child) {
+  margin-right: 30px;
+}
 .team {
   background-color: #f5f4fa;
 }
@@ -199,6 +215,7 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 10px;
+  margin-top: 30px;
 }
 .team-prof {
   display: flex;
@@ -209,6 +226,12 @@ img {
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-align: center;
+}
+.person {
+  background-color: var(--main-background-color);
+}
+.profession {
+  margin-bottom: 30px;
 }
 .footer {
   background-color: var(--color-hero-footer);
@@ -242,6 +265,11 @@ img {
 .navigation {
   display: inline-block;
   margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+.navigation .push:not(:last-child) {
+  margin-right: 8px;
 }
 .btn {
   display: inline-block;
@@ -281,13 +309,29 @@ img {
 .content {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .basket {
   margin-bottom: 30px;
+  border: 1px solid #eeeeee;
+}
+.basket-down {
+  margin-bottom: 0;
+  border: 1px solid #eeeeee;
+}
+.padding {
+  padding-left: 24px;
+  padding-right: 24px;
 }
 .basket,
 .basket-down {
   padding-bottom: 20px;
+}
+.basket :nth-child(3n) {
+  margin-right: 0;
+}
+.basket-down:nth-child(3n) {
+  margin-right: 0;
 }
 .content h3 {
   font-weight: 700;
